@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@800&display=swap');
+
+/* DIVS, ROWS, BOXES */
+
+body{
+    background-color: rgb(4, 13, 33);
+    overflow-y: scroll;
+}
+
+button{
+    height: 60.5px;
+}
+
+.row{
+    margin-top: 10px;
+}
+
+.box{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    background-color: rgb(24, 36, 61);
+    box-shadow: 5px 5px 5px #64acff;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.topbox{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    background-color: rgb(24, 36, 61);
+    width: 100%;
+    border-radius: 15px;
+}
+
+.divider {
+    background-color: #00BBFF;
+    justify-self: center;
+    height: 5px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+/* DROPDOWN */
+
+.dropbutton {
+    background-color: rgb(24, 36, 61);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+
+}
+
+#myInput {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 100%;
+    height: 60.5px;
+    padding-left: 5%;
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.dropdown-content {
+    display: none;
+    border-radius: 15px;
+    position: absolute;
+    background-color: rgb(24, 36, 61);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    width: 100%;
+    max-height:60vh;
+    overflow-y:scroll; 
+}
+
+.dropdown-content a {
+    padding-left: 5%;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(10, 18, 34);  
+    border-radius: 15px
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(15, 25, 45);
+}
+
+input::placeholder{
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: rgb(82, 82, 82);
+    font-size: 18px;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+#dropdowntext{
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+    padding: 5px 0 5px 0;
+    margin: 0%;
+}
+
+/* TEXT */
+
+a{
+    color: white;
+}
+
+h1{
+    background: -webkit-linear-gradient(-70deg, #90dcb7 0%, #64acff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    font-family: "Open Sans";
+    font-weight: 800;
+}
+
+h2{
+    color: white;
+    font-size: 40px;
+}
+
+#grade{
+    text-align: right;
+    font-size: 60px;
+}
+#statnumber{
+    font-family: "Maven Pro";
+    color: white;
+    font-size: 60px;
+}
+
+#stattitle{
+    margin-top: 10px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: white;
+    font-size: 23px;
+}
+
+#statavg{
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: white;
+    font-size: 23px;
+}
+
+#title404{
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: white;
+    font-size: 23px;
+    margin-top: 45vh;
+    text-align: center;
+}
