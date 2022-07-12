@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-*9iq9#(3tnfnc@qv+)v7-wt0mf)z%+29)1h&rnjofwq4rgtaaf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#FOR PRODUCTION UNCOMMENT BELOW
+# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+
+ALLOWED_HOSTS = ["dpcplayertracker.azurewebsites.net",'127.0.0.1',"169.254.130.2"]
 
 
 # Application definition
@@ -117,7 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

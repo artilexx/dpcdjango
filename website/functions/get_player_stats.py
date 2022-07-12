@@ -4,6 +4,7 @@ import json
 from collections import defaultdict
 from website.functions.player_ids import player_ids, roles
 from website.functions.assign_grade import assign_grade
+from dpcdjango.settings import BASE_DIR
 
 def get_player_stats(request, player):
     player = player.lower()
@@ -59,7 +60,7 @@ def get_player_stats(request, player):
 
     #calculate role averages from file containing role stats
     role_avgs = {}
-    with open(f"website\\role_stats\{player_role}_stats.json") as avg_file:
+    with open(f"{BASE_DIR}/website/role_stats/{player_role}_stats.json") as avg_file:
         avg_json = json.load(avg_file)
         role_avgs["kd"] = round(sum(avg_json.get("kdlist")) / len(avg_json.get("kdlist")),2)
         role_avgs["gpm"] = round(sum(avg_json.get("gpmlist")) / len(avg_json.get("gpmlist")),2)

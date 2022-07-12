@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from website import views
+from django.conf.urls.static import static
+from django.conf import settings
+from dpcdjango.settings import STATIC_URL, STATIC_ROOT
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage),
     path('favicon.ico', views.homepage),
     path('player/<str:player>', views.playerpage)
-]
+] + static(STATIC_URL, document_root=STATIC_ROOT)
